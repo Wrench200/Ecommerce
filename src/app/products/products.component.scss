@@ -1,0 +1,11 @@
+
+.all{
+    @apply  flex flex-col pt-[4rem] px-4 bg-gradient-to-b from-blue4 to-white 
+}
+h1{
+    @apply text-center text-white font-bold text-4xl my-4
+}
+ul{
+    @apply flex flex-wrap justify-center p-4 w-full 
+}
+

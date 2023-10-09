@@ -1,0 +1,19 @@
+<h1  mat-dialog-title>{{ data.title | title: 7}}</h1>
+<div class="flex justify-center p-4 w-[42rem]" >
+    <div class="w-[20rem] h-[25rem] p-4"><img src="{{ data.image }}" class="w-full h-full" alt="image" ></div>
+    <div class="w-[20rem] h-[25rem] p-4 flex flex-col justify-between ">
+        <p class="">
+            {{ data.description | title:68}}
+        </p>
+        <div class="flex justify-between">
+            <p class="text-4xl font-semibold">{{ data.price | dolar }}</p>
+    <button   (click)="addtocart(data)" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" ><svg class="w-[20px] h-[20px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        fill="none" viewBox="0 0 19 20">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+            d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm1-4H5m0 0L3 4m0 0h5.501M3 4l-.792-3H1m11 3h6m-3 3V1" />
+    </svg></button>
+    
+        </div>
+    </div>
+
+</div>

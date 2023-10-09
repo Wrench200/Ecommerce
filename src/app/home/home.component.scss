@@ -1,0 +1,33 @@
+.sec {
+  @apply flex pt-[4rem] px-[4rem] justify-between h-[100vh] bg-gradient-to-b from-blue4 from-50%  via-blue5 via-80% to-blue9;
+}
+.text {
+  @apply flex flex-col justify-center  items-start;
+}
+h1 {
+  @apply text-[4rem] font-bold leading-snug text-white;
+}
+h2 {
+  @apply text-[2rem] text-white;
+}
+button[type="button"] {
+  @apply bg-blue1 w-[15rem] h-[3rem] rounded-xl mt-4 text-white font-semibold;
+  &:hover {
+    @apply bg-lemonyellow text-black scale-105 transition-all duration-700;
+  }
+}
+.banner {
+  @apply flex justify-center items-center;
+  .svg {
+    @apply w-[43rem] h-[43rem] p-2;
+  }
+}
+.sec2 {
+  @apply flex pt-[4rem] px-[4rem] justify-between h-[100vh];
+}
+.message {
+  @apply text-coral;
+}
+.message2 {
+  @apply text-silver;
+}

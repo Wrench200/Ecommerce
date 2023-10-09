@@ -1,0 +1,73 @@
+<main class="mt-[4rem]">
+
+    <body class="body">
+        <div class="container">
+
+            <img src="/assets/SportsCo.png" alt="">
+
+        </div>
+        <div class="container">
+
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="form" novalidate>
+                <div class="form-group">
+                    <h2> Create an Account</h2>
+                    <p>Provide your details</p>
+                </div>
+
+                <div class="form-group">
+                    <label for=""> Your Name</label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="first last"
+                        formControlName="name" required>
+                    <div class="red" *ngIf="signupForm.controls['name'].dirty || signupForm.controls['name'].touched">
+                        <p *ngIf="signupForm.controls['name'].errors?.['required']">
+                            this field is required
+                        </p>
+                        <p *ngIf="signupForm.controls['name'].errors?.['maxlength']">
+                            maximum characters is 20
+                        </p>
+                        <p *ngIf="signupForm.controls['name'].errors?.['minlength']">
+                            Minimum characters is 4
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Email </label>
+                    <input type="text" name="email" id="email" placeholder="you@email.com" class="form-control"
+                        formControlName="email" required>
+                    <div class="red" *ngIf="signupForm.controls['email'].dirty || signupForm.controls['email'].touched">
+                        <p *ngIf="signupForm.controls['email'].errors?.['required']">
+                            this field is required
+                        </p>
+                        <p *ngIf="signupForm.controls['email'].errors?.['pattern']">
+                            Please enter a valid email
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Password</label>
+                    <input type="password" id="password" name="password" placeholder="By.YoU02" class="form-control"
+                        formControlName="password" required>
+                    <div class="red"
+                        *ngIf="signupForm.controls['password'].dirty || signupForm.controls['password'].touched">
+                        <p *ngIf="signupForm.controls['password'].errors?.['required']">
+                            this field is required
+                        </p>
+                        <p *ngIf="signupForm.controls['password'].errors?.['pattern']">
+                            The password should have atleast one number and one letter
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create account"
+                        [disabled]="signupForm.controls['password'].invalid || signupForm.controls['email'].invalid">
+                </div>
+               
+                <p class="member">Already a member? <a routerLink="/signin">Sign In</a></p>
+            </form>
+        </div>
+    </body>
+
+</main>

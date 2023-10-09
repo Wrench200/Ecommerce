@@ -1,0 +1,31 @@
+
+.nav {
+  @apply flex justify-between p-4 h-[4rem]  text-white fixed w-full top-0 ;
+
+  span {
+    @apply w-2/4 text-[2rem] h-full flex text-center items-center;
+  }
+  ul {
+    @apply flex justify-around w-2/4 h-full items-center;
+
+    li {
+      @apply flex text-center font-semibold text-lg;
+
+      &:hover {
+        @apply text-blue1  cursor-pointer;
+      }
+    }
+  }
+}
+.activeroute {
+  @apply text-blue3 ;
+  &:hover {
+    @apply text-blue3;
+  }
+}
+.active{
+  @apply bg-transparent transition-all duration-1000;
+}
+.inactive{
+  @apply bg-blue4 transition-all duration-1000 ;
+}
